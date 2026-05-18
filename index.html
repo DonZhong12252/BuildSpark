@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BuildSpark | Find Your Next Codex Project</title>
+    <meta
+      name="description"
+      content="BuildSpark helps makers find project ideas, copy production-ready Codex prompts, and plan exactly what to build next."
+    />
+    <meta property="og:title" content="BuildSpark | Find Your Next Codex Project" />
+    <meta
+      property="og:description"
+      content="Browse project ideas, copy Codex prompts, save builds, and turn blank-page energy into shipped apps."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="BuildSpark" />
+    <meta
+      name="twitter:description"
+      content="A public idea board for Codex projects, build plans, and production-ready prompts."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand site-brand" href="#top" aria-label="BuildSpark home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" role="img">
+            <path d="M12 3v4M12 17v4M4.2 7.2l2.9 2.9M16.9 16.9l2.9 2.9M3 12h4M17 12h4M4.2 16.8l2.9-2.9M16.9 7.1l2.9-2.9" />
+            <path d="M9 9h6v6H9z" />
+          </svg>
+        </span>
+        <span>
+          <strong>BuildSpark</strong>
+          <small>Projects worth prompting</small>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#paths">Paths</a>
+        <a href="#explore">Explore</a>
+        <a href="#submit">Submit</a>
+      </nav>
+
+      <button class="primary-action" id="heroRandom" type="button">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 3h5v5M4 20 21 3M21 16v5h-5M15 15l6 6M4 4l5 5" /></svg>
+        Pick a build
+      </button>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <h1>BuildSpark</h1>
+          <p>
+            Find project ideas, build plans, and production-ready Codex prompts. Pick an idea,
+            follow the plan, and ship something people can actually use.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-link" href="#explore">
+              Browse ideas
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" /></svg>
+            </a>
+            <button class="secondary-action" id="openIdeaFormHero" type="button">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
+              Submit idea
+            </button>
+          </div>
+        </div>
+
+        <div class="hero-board" aria-label="Featured BuildSpark ideas">
+          <div class="board-header">
+            <span>Today’s build board</span>
+            <strong id="challengeScore">0 saved</strong>
+          </div>
+          <div class="spotlight-card">
+            <span class="spotlight-label">Daily challenge</span>
+            <h2 id="dailyChallengeTitle">AI Inbox Triage Mockup</h2>
+            <p id="dailyChallengeText">Build a mock AI workflow that prioritizes messages and drafts replies.</p>
+            <button class="ghost-button" id="openDailyChallenge" type="button">Open challenge</button>
+          </div>
+          <div class="mini-feed">
+            <span><strong>10</strong> starter builds</span>
+            <span><strong>3</strong> prompt modes</span>
+            <span><strong>0</strong> signup required</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="feature-strip" aria-label="What makes BuildSpark useful">
+        <article>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16M4 12h16M4 19h10" /></svg>
+          <h2>Curated project boards</h2>
+          <p>Browse by startup ideas, weekend builds, dashboards, AI tools, games, and beginner projects.</p>
+        </article>
+        <article>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 8h11v11H8zM5 16H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h11a1 1 0 0 1 1 1v1" /></svg>
+          <h2>Prompts you can paste</h2>
+          <p>Each idea includes quick, detailed, and production-ready prompts plus acceptance criteria.</p>
+        </article>
+        <article>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9L12 3Z" /></svg>
+          <h2>Personal build vault</h2>
+          <p>Save favorites, add your own ideas, and keep a local library of projects you want to make.</p>
+        </article>
+      </section>
+
+      <section class="paths-section" id="paths">
+        <div class="section-heading wide">
+          <div>
+            <h2>Pick a path</h2>
+            <p>Jump into a collection based on what you want Codex to help you practice or ship.</p>
+          </div>
+        </div>
+        <div class="path-grid">
+          <button class="path-card" data-path="AI tools" type="button">
+            <span>AI tools</span>
+            <strong>Build assistants, triage flows, and generators.</strong>
+          </button>
+          <button class="path-card" data-path="Dashboards" type="button">
+            <span>Dashboards</span>
+            <strong>Practice filters, cards, charts, and detail panels.</strong>
+          </button>
+          <button class="path-card" data-path="Business apps" type="button">
+            <span>Business apps</span>
+            <strong>Turn messy workflows into useful tools.</strong>
+          </button>
+          <button class="path-card" data-path="Beginner websites" type="button">
+            <span>Beginner websites</span>
+            <strong>Start with clean static projects you can finish.</strong>
+          </button>
+        </div>
+      </section>
+
+      <section class="matchmaker" aria-label="Idea matchmaker">
+        <div>
+          <h2>Not sure where to start?</h2>
+          <p>Choose your mood and BuildSpark will narrow the board.</p>
+        </div>
+        <div class="match-controls">
+          <select id="matchGoal" aria-label="Choose build goal">
+            <option value="Startup idea">I want a startup idea</option>
+            <option value="Portfolio project">I want a portfolio piece</option>
+            <option value="Weekend project">I want a weekend project</option>
+            <option value="Can build in 1 hour">I want something fast</option>
+          </select>
+          <select id="matchLevel" aria-label="Choose skill level">
+            <option value="all">Any level</option>
+            <option value="Beginner">Beginner</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Advanced">Advanced</option>
+          </select>
+          <button class="primary-action" id="runMatchmaker" type="button">Find my project</button>
+        </div>
+      </section>
+
+      <section class="shell public-shell" id="explore">
+      <aside class="sidebar" aria-label="Project filters">
+        <a class="brand" href="#top" aria-label="BuildSpark board home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" role="img">
+              <path d="M5 8.5 12 4l7 4.5v7L12 20l-7-4.5v-7Z" />
+              <path d="m8.5 10 3.5 2 3.5-2M12 12v4.5" />
+            </svg>
+          </span>
+          <span>
+            <strong>BuildSpark Board</strong>
+            <small>Ideas, prompts, build paths</small>
+          </span>
+        </a>
+
+        <nav class="nav-list" aria-label="Dashboard views">
+          <button class="nav-item active" data-view="all" type="button">
+            <span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16" /></svg></span>
+            All ideas
+          </button>
+          <button class="nav-item" data-view="beginner" type="button">
+            <span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 20V4M5 11l7-7 7 7" /></svg></span>
+            Beginner
+          </button>
+          <button class="nav-item" data-view="apps" type="button">
+            <span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 5h14v14H5zM9 9h6M9 13h6" /></svg></span>
+            Apps
+          </button>
+          <button class="nav-item" data-view="business" type="button">
+            <span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 18V8l8-4 8 4v10M8 18v-6h8v6" /></svg></span>
+            Business tools
+          </button>
+          <button class="nav-item" data-view="saved" type="button">
+            <span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9L12 3Z" /></svg></span>
+            Saved
+          </button>
+          <button class="nav-item" data-view="custom" type="button">
+            <span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" /></svg></span>
+            My ideas
+          </button>
+        </nav>
+
+        <section class="sidebar-panel">
+          <h2>Prompt Formula</h2>
+          <ol>
+            <li>Say what the user should be able to do.</li>
+            <li>Name the screens and data.</li>
+            <li>Ask Codex to implement and verify it.</li>
+          </ol>
+        </section>
+      </aside>
+
+      <main class="main">
+        <header class="topbar">
+          <div>
+            <h1>Find something useful for Codex to build</h1>
+            <p>Browse practical project ideas with a ready prompt, build steps, features, and upgrade paths.</p>
+          </div>
+          <div class="top-actions">
+            <button class="secondary-action" id="openIdeaForm" type="button">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
+              Add idea
+            </button>
+            <button class="primary-action" id="randomIdea" type="button">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 3h5v5M4 20 21 3M21 16v5h-5M15 15l6 6M4 4l5 5" /></svg>
+              Surprise me
+            </button>
+          </div>
+        </header>
+
+        <section class="controls" aria-label="Search and filters">
+          <label class="search-box">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.3-4.3M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15Z" /></svg>
+            <input id="searchInput" type="search" placeholder="Search ideas, stacks, prompts, or outcomes" />
+          </label>
+          <select id="categoryFilter" aria-label="Filter by category">
+            <option value="all">All categories</option>
+          </select>
+          <select id="difficultyFilter" aria-label="Filter by difficulty">
+            <option value="all">All levels</option>
+            <option value="Beginner">Beginner</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Advanced">Advanced</option>
+          </select>
+          <select id="collectionFilter" aria-label="Filter by collection">
+            <option value="all">All collections</option>
+          </select>
+          <select id="buildModeFilter" aria-label="Filter by build mode">
+            <option value="all">All build modes</option>
+            <option value="Can build in 1 hour">Can build in 1 hour</option>
+            <option value="Weekend project">Weekend project</option>
+            <option value="Portfolio project">Portfolio project</option>
+            <option value="Startup idea">Startup idea</option>
+          </select>
+        </section>
+
+        <section class="summary-grid" aria-label="Dashboard summary">
+          <article>
+            <span id="visibleCount">0</span>
+            <p>matching ideas</p>
+          </article>
+          <article>
+            <span>24h</span>
+            <p>fastest weekend scope</p>
+          </article>
+          <article>
+            <span id="savedCount">0</span>
+            <p>saved ideas</p>
+          </article>
+          <article>
+            <span id="customCount">0</span>
+            <p>custom ideas</p>
+          </article>
+        </section>
+
+        <div class="content-grid">
+          <section>
+            <div class="section-heading">
+              <h2>Project Ideas</h2>
+              <p>Choose a card to see the exact prompt and build plan.</p>
+            </div>
+            <div class="cards" id="projectGrid" aria-live="polite"></div>
+          </section>
+
+          <aside class="detail-panel" id="detailPanel" aria-label="Selected project details"></aside>
+        </div>
+      </section>
+
+      <section class="community-section" id="submit">
+        <div>
+          <h2>Make the board better</h2>
+          <p>
+            BuildSpark is designed to grow with the people using it. Add an idea, save it locally,
+            copy the starter brief, then use that as the seed for a real Codex build.
+          </p>
+        </div>
+        <button class="primary-action" id="openIdeaFormBottom" type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
+          Add your project idea
+        </button>
+      </section>
+    </main>
+
+    <dialog class="idea-dialog" id="ideaDialog">
+      <form class="idea-form" id="ideaForm" method="dialog">
+        <div class="form-heading">
+          <div>
+            <h2>Add Your Own Idea</h2>
+            <p>Create a reusable Codex brief for a project you want to build later.</p>
+          </div>
+          <button class="icon-button" id="closeIdeaForm" value="cancel" type="button" aria-label="Close form">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12" /></svg>
+          </button>
+        </div>
+
+        <div class="form-grid">
+          <label>
+            Project title
+            <input name="title" required placeholder="AI newsletter planner" />
+          </label>
+          <label>
+            Category
+            <input name="category" required placeholder="AI Tools" />
+          </label>
+          <label>
+            Difficulty
+            <select name="difficulty">
+              <option>Beginner</option>
+              <option>Intermediate</option>
+              <option>Advanced</option>
+            </select>
+          </label>
+          <label>
+            Build mode
+            <select name="buildMode">
+              <option>Can build in 1 hour</option>
+              <option>Weekend project</option>
+              <option>Portfolio project</option>
+              <option>Startup idea</option>
+            </select>
+          </label>
+          <label>
+            Stack
+            <input name="stack" placeholder="React, localStorage" />
+          </label>
+          <label>
+            Collection
+            <input name="collection" placeholder="AI tools" />
+          </label>
+        </div>
+
+        <label>
+          Outcome
+          <textarea name="outcome" required placeholder="What the finished project should help people do."></textarea>
+        </label>
+        <label>
+          Tags, comma separated
+          <input name="tags" placeholder="ai, dashboard, automation" />
+        </label>
+        <label>
+          Skills taught, comma separated
+          <input name="skills" placeholder="forms, APIs, charts, localStorage" />
+        </label>
+        <label>
+          Features, one per line
+          <textarea name="features" required placeholder="Idea capture&#10;Dashboard view&#10;Copy-ready prompts"></textarea>
+        </label>
+        <label>
+          Build steps, one per line
+          <textarea name="steps" required placeholder="Model the data&#10;Build the main dashboard&#10;Add persistence and verification"></textarea>
+        </label>
+        <label>
+          Main Codex prompt
+          <textarea name="prompt" required placeholder="Build a polished web app that..."></textarea>
+        </label>
+
+        <div class="form-actions">
+          <button class="ghost-button" id="resetIdeas" type="button">Reset custom ideas</button>
+          <button class="primary-action" value="default" type="submit">Save idea</button>
+        </div>
+      </form>
+    </dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite">Prompt copied</div>
+    <script src="app.js"></script>
+  </body>
+</html>
