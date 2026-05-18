@@ -21,7 +21,7 @@ It includes:
 - saved ideas
 - starter briefs
 
-Link: <YOUR_URL>
+Link: https://donzhong12252.github.io/BuildSpark/
 
 ## LinkedIn Post
 
@@ -31,7 +31,7 @@ The site includes curated project paths, a daily build challenge, copy-ready pro
 
 It is designed for learners, builders, indie hackers, and anyone who wants to turn "I should build something" into a concrete project.
 
-Link: <YOUR_URL>
+Link: https://donzhong12252.github.io/BuildSpark/
 
 ## Reddit Post
 
@@ -43,7 +43,7 @@ The site lets you browse project ideas, filter by difficulty/build mode, save id
 
 It is static and runs in the browser, so favorites/custom ideas are stored locally.
 
-Link: <YOUR_URL>
+Link: https://donzhong12252.github.io/BuildSpark/
 
 ## Hacker News / Show HN
 
@@ -51,7 +51,7 @@ Title: Show HN: BuildSpark – project ideas and prompts for Codex
 
 BuildSpark is a static website for discovering useful Codex project ideas. Each idea includes a build plan, skills covered, prompt variants, and a starter brief. It also has saved ideas, custom submissions, a daily challenge, and project paths.
 
-Link: <YOUR_URL>
+Link: https://donzhong12252.github.io/BuildSpark/
 
 ## Product Hunt Tagline
 

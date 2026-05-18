@@ -4,6 +4,10 @@ Find your next Codex project.
 
 BuildSpark is a static website for discovering Codex project ideas, copying ready-to-use prompts, and saving a personal build library.
 
+Live site: https://donzhong12252.github.io/BuildSpark/
+
+GitHub repo: https://github.com/DonZhong12252/BuildSpark
+
 ## Features
 
 - Curated project ideas for apps, dashboards, AI tools, business tools, games, and beginner websites
